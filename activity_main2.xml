@@ -1,0 +1,168 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/warhammer40kmain"
+    tools:context=".MainActivity2">
+
+    <TextView
+        android:id="@+id/attackingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="#D50000"
+        android:text="@string/attacking"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/defendingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="19dp"
+        android:background="#004D40"
+        android:text="@string/defending"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/cp_vp_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@+id/attackingText"
+        app:layout_constraintStart_toStartOf="@+id/attackingText"
+        app:layout_constraintTop_toBottomOf="@+id/attackingText">
+
+    </LinearLayout>
+
+    <!-- Counter Buttons -->
+
+    <TextView
+        android:id="@+id/defendingcptext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="166dp"
+        android:layout_marginEnd="29dp"
+        android:background="#004D40"
+        android:text="@string/cp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/defendingvp"
+        android:layout_width="21dp"
+        android:layout_height="0dp"
+        android:background="#004D40"
+        android:text="@string/vp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/defendingcptext"
+        app:layout_constraintEnd_toEndOf="@+id/counterButton3"
+        app:layout_constraintStart_toStartOf="@+id/counterButton3"
+        app:layout_constraintTop_toTopOf="@+id/defendingcptext"
+        tools:ignore="TextSizeCheck" />
+
+    <Button
+        android:id="@+id/counterButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="@string/_2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/counterButton2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/counterButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_6"
+        app:layout_constraintStart_toEndOf="@+id/counterButton1"
+        app:layout_constraintTop_toTopOf="@+id/counterButton3" />
+
+    <!-- Stratagems Button -->
+
+    <!-- Orders Given Button -->
+
+    <Button
+        android:id="@+id/counterButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="13dp"
+        android:text="@string/_5"
+        app:layout_constraintEnd_toStartOf="@+id/counterButton4"
+        app:layout_constraintTop_toBottomOf="@+id/defendingvp" />
+
+    <Button
+        android:id="@+id/counterButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/_0"
+        app:layout_constraintBaseline_toBaselineOf="@+id/counterButton3"
+        app:layout_constraintEnd_toStartOf="@+id/defendingcptext"
+        app:layout_constraintStart_toStartOf="@+id/defendingcptext" />
+
+    <Button
+        android:id="@+id/stratagemsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="283dp"
+        android:text="@string/stratagems_used"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/ordersGivenButton" />
+
+    <Button
+        android:id="@+id/ordersGivenButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="orders_given"
+        app:layout_constraintStart_toStartOf="@+id/battleShockedButton"
+        app:layout_constraintTop_toBottomOf="@+id/stratagemsButton" />
+
+    <!-- BattleShock Button -->
+    <Button
+        android:id="@+id/battleShockedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/battle_shock"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ordersGivenButton" />
+
+    <TextView
+        android:id="@+id/attackingvp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginBottom="19dp"
+        android:background="#D50000"
+        android:text="@string/vp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/counterButton2"
+        app:layout_constraintStart_toStartOf="@+id/counterButton2" />
+
+    <TextView
+        android:id="@+id/attackingcptext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginBottom="19dp"
+        android:background="#D50000"
+        android:text="@string/cp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/counterButton1"
+        app:layout_constraintStart_toStartOf="@+id/counterButton1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
